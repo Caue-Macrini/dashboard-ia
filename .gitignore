@@ -1,0 +1,9 @@
+# Ignorar arquivos de ambiente com segredos
+.env
+
+# Ignorar a pasta de dados baixados
+/data/
+
+# Ignorar arquivos de cache e sistema do Python
+__pycache__/
+*.pyc

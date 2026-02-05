@@ -1,0 +1,8 @@
+streamlit
+pandas
+python-dotenv
+alpha-vantage
+certifi
+openai
+google-genai  # <--- Pacote NOVO
+pycoingecko
