@@ -1,19 +1,3 @@
-Com certeza! Um `README.md` bem escrito é a porta de entrada do seu projeto no GitHub. Ele precisa ser claro, completo e profissional para que recrutadores e outros desenvolvedores entendam rapidamente o valor do que você construiu.
-
-Com base em tudo que desenvolvemos, preparei uma versão final e atualizada para você.
-
----
-
-### Como Usar:
-
-1.  **Copie** todo o texto abaixo.
-2.  **Cole** no seu arquivo `README.md`, substituindo todo o conteúdo existente.
-3.  **Personalize** as seções marcadas com `[SEU NOME]`, `[SEU-USUARIO-GITHUB]`, etc.
-4.  **Tire uma nova screenshot** do seu dashboard finalizado, salve-a na raiz do projeto como `screenshot.png`, e ela aparecerá automaticamente.
-
----
-
-```markdown
 # 📊 Dashboard de Análise de Ativos com IA Generativa
 
 Este projeto é um Dashboard de Inteligência de Negócios (BI) construído em Python, que permite a análise interativa de ativos financeiros, incluindo Ações e Criptomoedas. A aplicação busca dados em tempo real, exibe gráficos dinâmicos com indicadores técnicos e utiliza uma Inteligência Artificial Generativa (Google Gemini) para criar resumos e insights analíticos sobre os ativos selecionados.
@@ -31,10 +15,6 @@ O objetivo foi criar uma ferramenta de portfólio de alto impacto, demonstrando 
 *   **Análise com IA Generativa:** Integração com a API do Google Gemini para gerar uma análise técnica completa, comentando sobre preço, volume, SMA e RSI.
 *   **Exportação de Dados:** Funcionalidade para baixar os dados filtrados e processados em formato `.csv`.
 *   **Tratamento de Erros Robusto:** Implementação de mecanismos para lidar com falhas de conexão, limites de API e erros de certificado SSL em redes restritivas.
-
-### 📸 Screenshot do Projeto
-
-![Screenshot do Dashboard](screenshot.png)
 
 ---
 
@@ -121,10 +101,10 @@ A aplicação estará disponível em `http://localhost:8501` no seu navegador.
 
 ## 👨‍💻 Desenvolvido por
 
-**[SEU NOME]**
+**Cauê Gaspar Macrini**
 
-*   **LinkedIn:** [www.linkedin.com/in/caue-macrini](https://www.linkedin.com/in/)
-*   **GitHub:** [[github.com/\[SEU-USUARIO-GITHUB](https://github.com/Caue-Macrini)]
+*   **LinkedIn:** [[www.linkedin.com/in/caue-macrini](https://www.linkedin.com/in/caue-macrini)]
+*   **GitHub:** [[github.com/\[Caue-Macrini](https://github.com/Caue-Macrini)]
 
 ```
 
