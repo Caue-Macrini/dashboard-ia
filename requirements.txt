@@ -7,3 +7,4 @@ google-genai>=1,<2
 pycoingecko>=3,<4
 requests>=2.32,<3
 pytest>=8,<9
+pytest-cov>=6,<8
