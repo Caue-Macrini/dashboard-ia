@@ -1,111 +1,59 @@
-# 📊 Dashboard de Análise de Ativos com IA Generativa
+# Dashboard de Ativos com IA
 
-Este projeto é um Dashboard de Inteligência de Negócios (BI) construído em Python, que permite a análise interativa de ativos financeiros, incluindo Ações e Criptomoedas. A aplicação busca dados em tempo real, exibe gráficos dinâmicos com indicadores técnicos e utiliza uma Inteligência Artificial Generativa (Google Gemini) para criar resumos e insights analíticos sobre os ativos selecionados.
+[![CI](https://github.com/Caue-Macrini/dashboard-ia/actions/workflows/ci.yml/badge.svg)](https://github.com/Caue-Macrini/dashboard-ia/actions)
 
-O objetivo foi criar uma ferramenta de portfólio de alto impacto, demonstrando habilidades em todo o ciclo de vida de um projeto de dados: desde a coleta e tratamento até a visualização avançada e a aplicação de modelos de IA.
+Dashboard em Streamlit para explorar ações e criptomoedas, calcular indicadores técnicos e gerar uma síntese com IA generativa.
 
-### ✨ Funcionalidades Principais
+## Funcionalidades
 
-*   **Análise Multi-Ativo:** Suporte para Ações (via Alpha Vantage) e Criptomoedas (via CoinGecko).
-*   **Dashboard Interativo:** Interface construída com Streamlit, permitindo ao usuário selecionar o ativo, o tipo, o período de análise e os parâmetros dos indicadores.
-*   **Visualização de Dados Avançada:**
-    *   Gráfico de preços com **Média Móvel Simples (SMA)** ajustável.
-    *   Gráfico de volume de negociação.
-    *   Gráfico do **Índice de Força Relativa (RSI)** com níveis de sobrecompra e sobrevenda.
-*   **Análise com IA Generativa:** Integração com a API do Google Gemini para gerar uma análise técnica completa, comentando sobre preço, volume, SMA e RSI.
-*   **Exportação de Dados:** Funcionalidade para baixar os dados filtrados e processados em formato `.csv`.
-*   **Tratamento de Erros Robusto:** Implementação de mecanismos para lidar com falhas de conexão, limites de API e erros de certificado SSL em redes restritivas.
+- Dados de ações via Alpha Vantage e criptomoedas via CoinGecko.
+- Filtros por período, média móvel, volume e RSI.
+- Resumo com Google Gemini e exportação em CSV.
+- Testes para os cálculos, Docker e integração contínua.
 
----
+```mermaid
+flowchart LR
+    A[Alpha Vantage] --> D[Tratamento com Pandas]
+    C[CoinGecko] --> D
+    D --> S[Dashboard Streamlit]
+    D --> G[Análise com Gemini]
+```
 
-## 🛠️ Tecnologias Utilizadas
-
-*   **Linguagem:** Python 3
-*   **Dashboard Interativo:** Streamlit
-*   **Manipulação de Dados:** Pandas
-*   **APIs Externas:**
-    *   Alpha Vantage (para dados de ações)
-    *   CoinGecko (para dados de criptomoedas)
-    *   Google Gemini (para análise de IA)
-*   **Requisições HTTP:** `requests`
-*   **Gerenciamento de Ambiente:** `python-dotenv`
-
----
-
-## ⚙️ Como Executar o Projeto Localmente
-
-Siga os passos abaixo para executar o projeto em sua máquina.
-
-**1. Pré-requisitos:**
-
-*   Você precisa ter o [Python 3](https://www.python.org/downloads/) instalado.
-*   É recomendado o uso de um ambiente virtual (`venv`) para isolar as dependências.
-
-**2. Clone o Repositório:**
+## Executar localmente
 
 ```bash
-git clone https://github.com/[SEU-USUARIO-GITHUB]/dashboard-ia.git
+git clone https://github.com/Caue-Macrini/dashboard-ia.git
 cd dashboard-ia
-```
-
-**3. Crie e Ative um Ambiente Virtual:**
-
-```bash
-# No Windows (PowerShell)
 python -m venv .venv
-.venv\Scripts\activate
-
-# No macOS/Linux
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-**4. Instale as Dependências:**
-
-Crie um arquivo `requirements.txt` na raiz do projeto com o seguinte conteúdo:
-
-```
-streamlit
-pandas
-python-dotenv
-alpha-vantage
-certifi
-requests
-pycoingecko
-```
-
-Em seguida, instale as bibliotecas:
-
-```bash
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-```
-
-**5. Configure as Variáveis de Ambiente:**
-
-Crie um arquivo chamado `.env` na raiz do projeto. Adicione suas chaves de API neste arquivo (substitua os valores de exemplo):
-
-```
-ALPHA_VANTAGE_API_KEY="SUA_CHAVE_ALPHA_VANTAGE"
-GEMINI_API_KEY="SUA_CHAVE_GEMINI"
-```
-
-**6. Execute a Aplicação:**
-
-```bash
+cp .env.example .env
 streamlit run app/main.py
 ```
 
-A aplicação estará disponível em `http://localhost:8501` no seu navegador.
+Configure no `.env`:
 
----
-
-## 👨‍💻 Desenvolvido por
-
-**Cauê Gaspar Macrini**
-
-*   **LinkedIn:** [[www.linkedin.com/in/caue-macrini](https://www.linkedin.com/in/caue-macrini)]
-*   **GitHub:** [[github.com/\[Caue-Macrini](https://github.com/Caue-Macrini)]
-
+```env
+ALPHA_VANTAGE_API_KEY=
+GEMINI_API_KEY=
 ```
 
----
+## Qualidade e segurança
+
+```bash
+pytest -q
+docker build -t dashboard-ia .
+docker run --rm -p 8501:8501 --env-file .env dashboard-ia
+```
+
+- As chaves são lidas por variáveis de ambiente e `.env` não é versionado.
+- O projeto é educacional e não constitui recomendação financeira.
+- A análise de IA deve ser validada pelo usuário antes de qualquer decisão.
+
+## Autor
+
+[Cauê Gaspar Macrini](https://www.linkedin.com/in/caue-macrini) · [GitHub](https://github.com/Caue-Macrini)
+
+## Licença
+
+MIT.

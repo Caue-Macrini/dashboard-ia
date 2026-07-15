@@ -136,8 +136,8 @@ if not dados_ativo.empty:
         "Desenvolvido por Cauê Gaspar Macrini"
     )
     st.sidebar.markdown(
-        "[LinkedIn](www.linkedin.com/in/caue-macrini ) | "
-        "[GitHub](https://github.com/Caue-Macrini )"
+        "[LinkedIn](https://www.linkedin.com/in/caue-macrini) | "
+        "[GitHub](https://github.com/Caue-Macrini)"
     )
 
 else:

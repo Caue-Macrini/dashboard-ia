@@ -1,9 +1,5 @@
-# Ignorar arquivos de ambiente com segredos
+.venv/
 .env
-
-# Ignorar a pasta de dados baixados
-/data/
-
-# Ignorar arquivos de cache e sistema do Python
 __pycache__/
+.pytest_cache/
 *.pyc

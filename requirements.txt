@@ -1,8 +1,9 @@
-streamlit
-pandas
-python-dotenv
-alpha-vantage
-certifi
-openai
-google-genai  # <--- Pacote NOVO
-pycoingecko
+streamlit>=1.40,<2
+pandas>=2.2,<3
+python-dotenv>=1.0,<2
+alpha-vantage>=3,<4
+certifi>=2025.1
+google-genai>=1,<2
+pycoingecko>=3,<4
+requests>=2.32,<3
+pytest>=8,<9
